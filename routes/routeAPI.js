@@ -19,8 +19,19 @@ module.exports = function (app) {
             if (err) throw err;
             newData = JSON.parse(data);
             newData.push(newNotes);
+            let noteId = 1;
+            newData.forEach((note) => {
+                note.id = noteId;
+                noteId++;
+                return newData;
+            });
+            console.log(newData);
+            newDataString = JSON.stringify(newData);
+            fs.writeFile('./db/db.json', newDataString, (err, data) => {
+                if (err) throw err;
+            });
         });
-        console.log(newData);
+        res.send('Your note has been received!');
 
     });
 };

@@ -16,5 +16,5 @@ app.use(express.static("public"));
 
 // listener 
 app.listen(PORT, function () {
-    console.log("The App is listening on PORT: " + PORT);
+    console.log(`The App is listening on PORT: ${PORT}`);
 });

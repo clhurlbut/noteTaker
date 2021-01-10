@@ -1,4 +1,4 @@
-// dependencies
+
 const express = require("express");
 
 // express server
@@ -12,8 +12,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-// API routes
-
+// routes
+require("./routes/routeAPI")(app);
+require("./routes/routeHTML")(app);
 // listener 
 app.listen(PORT, function () {
     console.log(`The App is listening on PORT: ${PORT}`);

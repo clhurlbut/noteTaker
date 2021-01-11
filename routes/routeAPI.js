@@ -35,12 +35,12 @@ module.exports = function (app) {
 
     //api delete request
     app.delete('/api/notes/:id', function (req, res) {
-        const deleteNote = req.params.id;
+        const deleteNotes = req.params.id;
         fs.readFile('./db/db.json', (err, data) => {
             if (err) throw err;
             newData = JSON.parse(data);
             for (let i = 0; i < newData.length; i++) {
-                if (newData[i].id === Number(deleteNote)) {
+                if (newData[i].id === Number(deleteNotes)) {
                     newData.splice([i], 1);
                 }
             }

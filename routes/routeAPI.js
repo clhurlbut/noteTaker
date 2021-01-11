@@ -39,9 +39,11 @@ module.exports = function (app) {
         const deleteNotes = req.params.id;
         fs.readFile('./db/db.json', (err, data) => {
             if (err) throw err;
+            // targeting the unique id of the note to delete
             newData = JSON.parse(data);
             for (let i = 0; i < newData.length; i++) {
                 if (newData[i].id === Number(deleteNotes)) {
+                    //use splice to remove a single given note 
                     newData.splice([i], 1);
                 }
             }

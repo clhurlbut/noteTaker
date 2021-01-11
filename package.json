@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "An express.js based app to save notes",
   "main": "server.js",
-  "author": "",
+  "author": "cassandra hurlbut",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4"

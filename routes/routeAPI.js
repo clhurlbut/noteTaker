@@ -31,6 +31,7 @@ module.exports = function (app) {
                 if (err) throw err;
             });
         });
+        res.send('Note received!')
     });
 
     //api delete request
@@ -49,5 +50,7 @@ module.exports = function (app) {
                 if (err) throw err;
             });
         });
+        //express response 204 
+        res.status(204).send();
     });
 };

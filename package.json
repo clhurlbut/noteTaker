@@ -1,7 +1,7 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "An express.js based app to save notes",
   "main": "server.js",
   "author": "",
   "license": "ISC",

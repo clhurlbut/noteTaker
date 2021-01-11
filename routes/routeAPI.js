@@ -26,7 +26,7 @@ module.exports = function (app) {
                 return newData;
             });
             newDataString = JSON.stringify(newData);
-            // async write stringified file 
+            // async write stringified data
             fs.writeFile('./db/db.json', newDataString, (err, data) => {
                 if (err) throw err;
             });
